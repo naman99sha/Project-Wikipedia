@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    form{
+           margin-left:35em
+    } 
+    .center{
+             display:block;
+             margin-left:auto;
+             margin-right:auto;
+             width: 25%;
+    } 
+  </style>
+ </head>
+ <body>
+  {% block body %}{% endblock %}
+  <img src="https://cdn2.downdetector.com/static/uploads/logo/wikipedia-logo_1.png" class="center" alt="logo">
+  <h1 style="color:blue;" align="center">Wikipedia Search Automation</h1>
+  <h3 style="color:green;" align="center">-As prepared by the team of Nishtha Sharma,Manasvi Kumar and Naman Sharma</h3>
+  <form action="http://localhost:5000/search" method="post">
+   <p>Enter the keyword to be searched:</p>
+   <p><input type="text" name="nm" value={{request.form.key}}></p>
+   <p style="margin-left:4em"><input type="submit" value="search" /></p>
+  </form>
+ </body>
+</html>
